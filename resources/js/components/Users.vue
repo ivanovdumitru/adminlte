@@ -3,10 +3,10 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Dashboard Component</div>
+                    <div class="card-header">Users Component</div>
 
                     <div class="card-body">
-                        Denis se joaca in jocuri THE CREW 2
+                        Denis se joaca in jocuri HA HA HA
                     </div>
                 </div>
             </div>

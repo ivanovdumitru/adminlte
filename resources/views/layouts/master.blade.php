@@ -74,38 +74,36 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </router-link>
                     </li>
                     <li class="nav-item has-treeview menu-open">
-                        <a href="#" class="nav-link active">
-                            <i class="nav-icon fa fa-tasks"></i>
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fa fa-tasks  green"></i>
                             <p>Management
                                 <i class="right fa fa-angle-left"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
-                                    <i class="fa fa-circle-o nav-icon"></i>
-                                    <p>Active Page</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="fa fa-circle-o nav-icon"></i>
-                                    <p>Inactive Page</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <router-link to="/profile" class="nav-link">
-                                    <i class="nav-icon fa fa-user"></i>
-                                    <p>Profile</p>
+                                <router-link to="/users" class="nav-link active">
+                                    <i class="fa fa-users"></i>
+                                    <p>Users</p>
                                 </router-link>
                             </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="nav-icon fa fa-sign-out-alt"></i>
-                                    <p>Log Out</p>
-                                </a>
-                            </li>
                         </ul>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/profile" class="nav-link">
+                            <i class="nav-icon fa fa-user"></i>
+                            <p>Profile</p>
+                        </router-link>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                            <i class="nav-icon fa fa-sign-out-alt red"></i>
+                            <p>{{ __('Logout') }}</p>
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
                     </li>
                 </ul>
             </nav>
